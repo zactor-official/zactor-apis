@@ -19,7 +19,7 @@ Attributes | Description | Type
 | pan | Pan Number | String |
 | holderName | KYC Holder Name | String |
 | status | KYC Status | Boolean |
-| reason | if status false, reason for false | String |
+| reason | if status false, reason for it. Eg: Hold, Rejected, etc | String |
 | doKycAgain | true means user is "KYC Validated". False means user is "KYC Registered" or "KYC ON-Hold" an KYC has to be done again | Boolean |
 | kycCreationDate | KYC Creation Date | String |
 | kycLastStatusUpdatedDate | KYC Status Last Updated Date | String |
