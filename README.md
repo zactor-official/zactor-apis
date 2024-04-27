@@ -24,8 +24,8 @@ Attributes | Description | Type
 | kycCreationDate | KYC Creation Date | String |
 | kycLastStatusUpdatedDate | KYC Status Last Updated Date | String |
 | kycMode | Mode by which user has completed the KYC | String |
-| addressProofPer | Indicates the Address proof submitted is Aadhaar or Non-Aadhaar based KYC | String |
-| addressProofCor | Indicates the Address proof submitted is Aadhaar or Non-Aadhaar based KYC | String |
+| addressProofPer | Indicates the Address proof submitted is Aadhaar or Non-Aadhaar based KYC for Permanent address| String |
+| addressProofCor | Indicates the Address proof submitted is Aadhaar or Non-Aadhaar based KYC for correspondence address | String |
 | detailsSource | KRA Source of KYC data  | String |
 
 
