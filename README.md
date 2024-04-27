@@ -1,9 +1,9 @@
 # Zactor APIs: Finance
-We have creating a collection a APIs that can be used for Mutual Fund industry
+We've developed a suite of APIs tailored for use within the Mutual Fund industry. These APIs provide a comprehensive set of tools and functionalities to streamline processes, enhance efficiency, and enable seamless integration within the mutual fund ecosystem.
 
 ## PAN Check API
 
-Use this API to get the PAN status.
+Use this API to check the PAN status and determine if the user needs to complete KYC again based on updated KYC regulations.
 
 ### Route
 <baseUrl>/v1/zactor-apis/pan/check
@@ -16,20 +16,17 @@ Attributes | Description | Type
 ### Response
 Attributes | Description | Type
 |---|---|---|
-| pan | pan | String | 
-| holderName | holderName | String |
-| status | status | String |
-| kycCreationDate | kycCreationDate | String |
-| kycLastStatusUpdatedDate | kycLastStatusUpdatedDate | String |
-| modificationDate | modificationDate | String |
-| statusOfModification | statusOfModification | String |
-| missingFields | missingFields | String |
-| holdOrDeactiveRemark | holdOrDeactiveRemark | String |
-| kycMode | kycMode | String |
-| inPersonVerification | inPersonVerification | String |
-| addressProofPer | addressProofPer | String |
-| addressProofCor | addressProofCor | String |
-| detailsSource | detailsSource | String |
+| pan | Pan Number | String |
+| holderName | KYC Holder Name | String |
+| status | KYC Status | Boolean |
+| reason | if status false, reason for false | String |
+| doKycAgain | true means user is "KYC Validated". False means user is "KYC Registered" or "KYC ON-Hold" an KYC has to be done again | Boolean |
+| kycCreationDate | KYC Creation Date | String |
+| kycLastStatusUpdatedDate | KYC Status Last Updated Date | String |
+| kycMode | Mode by which user has completed the KYC | String |
+| addressProofPer | Indicates the Address proof submitted is Aadhaar or Non-Aadhaar based KYC | String |
+| addressProofCor | Indicates the Address proof submitted is Aadhaar or Non-Aadhaar based KYC | String |
+| detailsSource | KRA Source of KYC data  | String |
 
 
 ### Example Request
@@ -49,24 +46,25 @@ curl --location '<baseUrl>/v1/zactor-apis/pan/check' \
   pan: 'ABCDE1234F',
   holderName: 'Tony Stark',
   status: true,
-  doKycAgain: true,
+  reason: "",    
+  doKycAgain: false,
   kycCreationDate: '30-11-2021 11:51:38',
   kycLastStatusUpdatedDate: '',
-  modificationDate: '',
-  statusOfModification: '005',
-  missingFields: '',
-  holdOrDeactiveRemark: '',
   kycMode: 'Normal',
-  inPersonVerification: 'E',
   addressProofPer: 'Aadhar Digilocker',
   addressProofCor: 'Aadhar Digilocker',
-  detailsSource: 'CVLKRA'
+  detailsSource: 'CAMSKRA'
 }
 ```
 
+## APIs In Timeline
+- Mutual Fund fact-sheet
+- Detailed Mutual Fund Research
+  
+
 ## Contact for Auth Keys
 
-E-mail: shivam@zactortech.com, contact@zactortech.com
+E-mail: contact@zactortech.com, shivam@zactortech.com
 
 Mobile: +91-77175 48040
 
