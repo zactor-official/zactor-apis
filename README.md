@@ -71,4 +71,4 @@ Mobile: +91-77175 48040
 
 Company Linkedin: [Zactor Tech](https://www.linkedin.com/company/zactor-tech)
 
-Personal Linkedin: [Shivam Parihar](https://www.linkedin.com/in/shivamparihar/)
+Developer Linkedin: [Shivam Parihar](https://www.linkedin.com/in/shivamparihar/)
